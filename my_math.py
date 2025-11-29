@@ -26,6 +26,7 @@ def is_Prime(x):
     return True
 
 #2 Original Math Functions
+#checking if n is a perfect square
 def Perfect_Square(n):
     if not isinstance(n, int):
         raise ValueError("input must be a integer.")
@@ -33,6 +34,21 @@ def Perfect_Square(n):
         return False
     root = int(n ** 0.5)
     return root * root == n
+
+#checking if num is a 
+def Perfect_Number(num):
+    
+    if not isinstance(num, int):
+        raise ValueError("input must be an integer")
+    if n <= 0:
+        raise ValueError("input must be a positive integer")
+
+    total = 0
+    for i in range(1, num):
+        if num % i == 0:
+            total += i
+
+    return total == num
 
 
 
