@@ -2,11 +2,8 @@
 
 #checking if x is a prime number
 def is_Prime(x):
-    try:
-        x = int(x)
-    except: 
-            ValueError("x has to be an integer.")
-
+    if not isinstance(x, int):
+        raise ValueError ("input must be a integer.")
     if x <= 0:              
         return False #x is is less than or equal to 0, which is not a prime number,neither are negative numbers.
     if x == 1:
@@ -18,9 +15,8 @@ def is_Prime(x):
 
 #2 Original Math Functions
 def Perfect_Square(n):
-    try: 
-         n = int(n)
-    except: ValueError("n had to be an integer.")
+    if not isinstance(n, int):
+        raise ValueError("input must be a integer.")
     if n <= 0:
         return False
     root = int(n ** 0.5)
