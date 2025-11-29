@@ -1,6 +1,6 @@
 #Rebecca Hamid QCC ID:23803320
 import unittest
-from my_math import is_Prime, Perfect_Square
+from my_math import is_Prime, Perfect_Square, Perfect_Number
 class TestIsPrimeEdgeCases(unittest.TestCase):
 
     # Test valid primes and non-primes
@@ -30,9 +30,6 @@ class TestIsPrimeEdgeCases(unittest.TestCase):
         with self.assertRaises(ValueError):
             is_Prime(None)   # None input
 
-# Run the tests if this file is executed
-if __name__ == "__main__":
-    unittest.main()
 
 #unit test for perfect square
 
@@ -70,10 +67,6 @@ class TestPerfectSquare(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             Perfect_Square(None)    # check if there is no input
-
-# Run tests
-if __name__ == "__main__":
-    unittest.main()
 
 
 # Your is_perfect_number function
@@ -122,3 +115,6 @@ class TestPerfectNumber(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             is_perfect_number([])    # empty list
+
+if __name__ == "__main__":
+    unittest.main()
