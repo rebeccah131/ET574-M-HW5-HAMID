@@ -14,5 +14,11 @@ def is_Prime(x):
     if x  == 2:
         return True    #2 is the only even number that is a prime number.
 
+#2 Original Math Functions
+def is_PerfectSquare(n):
+    if n < 0:
+        return False
+    root = int(n ** 0.5)
+    return root * root == n
 
-    
+
